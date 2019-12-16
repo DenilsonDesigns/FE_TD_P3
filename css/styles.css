@@ -1,0 +1,11 @@
+/* smallers screens and mobiles */
+body {
+  background-color: red;
+}
+
+/* for bigger screens */
+@media (min-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
