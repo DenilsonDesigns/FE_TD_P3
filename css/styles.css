@@ -1,11 +1,312 @@
+/* 
+    References used:
+    https://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
+    https://stackoverflow.com/questions/26270168/how-to-customize-radio-button-in-html
+
+*/
+
 /* smallers screens and mobiles */
 body {
-  background-color: red;
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  background-color: rgb(255, 253, 253);
+  font-family: "Roboto", sans-serif;
+}
+::placeholder {
+  color: rgb(161, 161, 182);
+  font-size: 1em;
+  text-align: right;
+}
+#main-header {
+  background-color: rgb(15, 15, 53);
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+#main-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+h2:first-of-type {
+  /* color: white; */
+  text-align: center;
+}
+h3:first-of-type {
+  text-align: left;
+  margin-left: 4%;
+}
+.p-first {
+  text-align: center;
+  margin-left: 0%;
+}
+.p-main {
+  text-align: left;
+  margin-left: 5%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+  display: block;
+  width: 90%;
+  margin-left: 4%;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(240, 236, 236);
+}
+#state-selector {
+  width: 92%;
+}
+#zip {
+  width: 25%;
+}
+
+form label {
+  display: block;
+  margin-left: 4%;
+  padding-bottom: 2%;
+}
+.label-check {
+  display: flex;
+  align-items: center;
+  align-content: left;
+  margin-left: 0%;
+}
+form input[type="checkbox"] {
+  display: inline-block;
+  margin-left: 5%;
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+form input[type="checkbox"]:active,
+form input[type="checkbox"]:checked:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+form input[type="checkbox"]:checked {
+  background-color: #3247ff;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #f4f6f7;
+}
+form input[type="checkbox"]:checked:after {
+  content: "\2714";
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #f4f6f7;
+}
+.pref-format label {
+  display: flex;
+  align-items: center;
+}
+.pref-radio {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #bbb;
+  background-color: #e7e6e7;
+  border-radius: 50%;
+}
+.pref-radio:checked {
+  background-color: #3247ff;
+}
+
+textarea {
+  display: block;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(240, 236, 236);
+}
+
+#signup {
+  margin-left: 5%;
+  width: 90%;
+  padding: 4% 0%;
+  font-size: 27px;
+  border-radius: 2%;
+  color: white;
+  border-style: none;
+  background-color: rgba(0, 207, 162, 0.795);
+}
+
+.p-end {
+  text-align: center;
 }
 
 /* for bigger screens */
 @media (min-width: 768px) {
   body {
-    background-color: green;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+    background-color: rgb(255, 253, 253);
+    font-family: "Roboto", sans-serif;
+  }
+  #main-header {
+    background-color: rgb(15, 15, 53);
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  #main-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  h2:first-of-type {
+    /* color: white; */
+    text-align: center;
+  }
+  h3:first-of-type {
+    text-align: left;
+    margin-left: 4%;
+  }
+  .p-first {
+    text-align: center;
+    margin-left: 0%;
+  }
+  .p-main {
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form select {
+    display: inline-block;
+    width: 70%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(240, 236, 236);
+  }
+  #state-selector {
+    width: 70%;
+  }
+  #zip {
+    width: 25%;
+  }
+
+  form label {
+    display: inline-block;
+    margin-left: 4%;
+    padding-bottom: 2%;
+    min-width: 17%;
+  }
+  .label-check {
+    display: flex;
+    align-items: center;
+    align-content: left;
+    margin-left: 0%;
+  }
+  form input[type="checkbox"] {
+    display: inline-block;
+    margin-left: 5%;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+  }
+  form input[type="checkbox"]:active,
+  form input[type="checkbox"]:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  form input[type="checkbox"]:checked {
+    background-color: #3247ff;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+      inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #f4f6f7;
+  }
+  form input[type="checkbox"]:checked:after {
+    content: "\2714";
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #f4f6f7;
+  }
+  .pref-format label {
+    display: flex;
+    align-items: center;
+  }
+  .pref-radio {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid #bbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+  }
+  .pref-radio:checked {
+    background-color: #3247ff;
+  }
+
+  textarea {
+    display: block;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 90%;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(240, 236, 236);
+  }
+
+  #signup {
+    margin-left: 5%;
+    width: 90%;
+    padding: 4% 0%;
+    font-size: 30px;
+    border-radius: 2%;
+    color: white;
+    border-style: none;
+    background-color: rgba(0, 207, 162, 0.795);
+  }
+
+  .p-end {
+    text-align: center;
   }
 }
