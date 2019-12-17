@@ -70,6 +70,7 @@ h3:first-of-type {
 
 form input[type="text"],
 form input[type="email"],
+form input[type="tel"],
 form select {
   display: block;
   width: 90%;
@@ -85,6 +86,7 @@ form select {
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
+form input[type="tel"]:focus,
 form select:focus,
 form textarea:focus {
   background-color: lightblue;
@@ -241,12 +243,16 @@ textarea {
     margin-left: 0%;
   }
   form {
-    max-width: 900px;
-    margin-left: 25%;
+    /* max-width: 900px; */
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
   }
 
   form input[type="text"],
   form input[type="email"],
+  form input[type="tel"],
   form select {
     display: inline-block;
     width: 70%;
